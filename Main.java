@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String args[]){
-        
+       
         SolarSystem solarSystem = new SolarSystem(1250, 1250);
-        
+
         Sun sun = new Sun(0, 0, 75, "YELLOW", solarSystem, true);
-        
+
         Planet mercury = new Planet(60, 0, 19, "#8B4000", solarSystem);
 
         Planet venus = new Planet(100, 0, 30, "ORANGE", solarSystem);
@@ -31,10 +31,14 @@ public class Main {
 
         Planet neptune = new Planet(435, 0, 37.5, "#4870DD", solarSystem);
             Moon triton = new Moon(25, 0, 10, "DARK_GRAY", solarSystem, neptune.getDistance(), neptune.getAngle(), neptune);
+
+        Asteroid asteroidBelt = new Asteroid(200, 0, 10, "GRAY", solarSystem, 100);
+
+        
         
         while (true) {
             sun.drawSun();
-            
+
             mercury.drawPlanet();
             mercury.movePlanet(1.75);
             
@@ -80,8 +84,13 @@ public class Main {
             neptune.movePlanet(0.5);
                 triton.drawMoon();
                 triton.moveMoon(2.6);
-            
+
+            asteroidBelt.asteroidLoop(300);
+            asteroidBelt.moveAsteroid(10);
+                
             solarSystem.finishedDrawing();
         }
+        
+
     }
 }
