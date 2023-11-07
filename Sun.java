@@ -10,5 +10,10 @@ public class Sun extends Planet{
             angle = 0;
             color = "YELLOW";
         }
+        public void drawSun()
+    {
+        solarSystem.drawSolarObject(distance, angle, diameter, color);
+        
+    }
     }
 }
