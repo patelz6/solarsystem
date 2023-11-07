@@ -59,6 +59,11 @@ public class Planet{
         
     }
 
+    public void drawPlanet()
+    {
+        solarSystem.drawSolarObject(distance, angle, diameter, color);
+    }
+
   
 
     
