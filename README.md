@@ -1,2 +1,2 @@
-# solarsystem
-212 java task 1
+# Solar System Java task 1 / SCC212
+
