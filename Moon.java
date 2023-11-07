@@ -10,4 +10,16 @@ public class Moon extends Planet{
         this.angleR = angleR;
         this.planet = planet;    
     }
+    
+    public void drawMoon()
+    {   
+        solarSystem.drawSolarObjectAbout(distance, angle, diameter, color, distanceR, angleR);
+    }
+
+    public void moveMoon(double velocity){
+        angle = angle + velocity;
+        angleR = planet.getAngle();
+        distanceR = planet.getDistance();
+        
+    }
 }
